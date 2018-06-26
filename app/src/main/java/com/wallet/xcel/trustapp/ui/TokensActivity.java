@@ -15,6 +15,9 @@ import com.wallet.xcel.trustapp.R;
 import com.wallet.xcel.trustapp.entity.ErrorEnvelope;
 import com.wallet.xcel.trustapp.entity.Token;
 import com.wallet.xcel.trustapp.ui.widget.adapter.TokensAdapter;
+import com.wallet.xcel.trustapp.util.AddTokenHelper;
+import com.wallet.xcel.trustapp.viewmodel.AddTokenViewModel;
+import com.wallet.xcel.trustapp.viewmodel.AddTokenViewModelFactory;
 import com.wallet.xcel.trustapp.viewmodel.TokensViewModel;
 import com.wallet.xcel.trustapp.viewmodel.TokensViewModelFactory;
 import com.wallet.xcel.trustapp.widget.SystemView;
@@ -32,6 +35,11 @@ public class TokensActivity extends BaseActivity implements View.OnClickListener
 
     private SystemView systemView;
     private TokensAdapter adapter;
+    private AddTokenHelper tokenHelper;
+    private AddTokenViewModel addTokenViewModel;
+
+    @Inject
+    protected AddTokenViewModelFactory addTokenViewModelFactory;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +50,11 @@ public class TokensActivity extends BaseActivity implements View.OnClickListener
         setContentView(R.layout.activity_tokens);
 
         toolbar();
+        addTokenViewModel = ViewModelProviders.of(this, addTokenViewModelFactory)
+                .get(AddTokenViewModel.class);
+        tokenHelper = new AddTokenHelper();
+        tokenHelper.init(this, addTokenViewModel);
+
 
         adapter = new TokensAdapter(this::onTokenClick);
         SwipeRefreshLayout refreshLayout = findViewById(R.id.refresh_layout);
@@ -105,6 +118,10 @@ public class TokensActivity extends BaseActivity implements View.OnClickListener
         adapter.setTokens(tokens);
         if (tokens == null || tokens.length == 0) {
             systemView.showEmpty(getString(R.string.no_tokens));
+
+            tokenHelper.addDefaultToken(getString(R.string.xcelContract),getString(R.string.xcelSymbol),getString(R.string.xcelDecimals));
+            tokenHelper.addDefaultToken(getString(R.string.bitContract),getString(R.string.bitSymbol),getString(R.string.bitDecimals));
+            tokenHelper.addDefaultToken(getString(R.string.ethContract),getString(R.string.ethSymbol),getString(R.string.ethDecimals));
         }
     }
 

@@ -8,6 +8,8 @@
     <string name="title_account">Wallets</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_create_account">New Wallet</string>
+    <string name="title_transactions">Transactions</string>
+    <string name="title_my_wallet">My Wallet</string>
 
     <!-- Strings relatedwalletount creation -->
     <string name="prompt_email">Wallet name</string>
@@ -230,4 +232,15 @@
     <string name="title_activity_barcode">Barcode Scan</string>
     <string name="error_add_token">Could not add token.</string>
     <string name="facebook">Facebook</string>
+
+    <!-- Default tokens -->
+    <string name="xcelContract">0xf6276830c265a779a2225b9d2fcbab790cbeb92b</string>
+    <string name="xcelDecimals">18</string>
+    <string name="xcelSymbol">XCEL</string>
+    <string name="ethContract">0x6f1361bccce0c2c1af602fefc3306379aedb642b</string>
+    <string name="ethDecimals">18</string>
+    <string name="ethSymbol">ETH</string>
+    <string name="bitContract">0xd8c2b41773f29b6cd9a31b054b5fdf9c2eeef175</string>
+    <string name="bitDecimals">8</string>
+    <string name="bitSymbol">BTC</string>
 </resources>

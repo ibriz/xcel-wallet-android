@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:enabled="true"
+        app:showAsAction="always"
+        android:id="@+id/action_transactions"
+        android:icon="@drawable/tab_transactions"
+        android:title="@string/title_transactions"
+        />
+    <!--<item
+        android:enabled="true"
+        app:showAsAction="always"
         android:id="@+id/action_send"
         android:icon="@drawable/ic_send_white_24dp"
         android:title="@string/title_send"
-        />
+        />-->
     <item
+        android:enabled="true"
+        app:showAsAction="always"
         android:id="@+id/action_my_address"
-        android:icon="@mipmap/qr_code_icon"
+        android:icon="@drawable/tab_qr"
         android:title="@string/title_request"
         />
     <item
+        android:enabled="true"
+        app:showAsAction="always"
         android:id="@+id/action_my_tokens"
         android:icon="@drawable/token_icon"
         android:title="@string/title_tokens"
+        />
+    <item
+        android:enabled="true"
+        app:showAsAction="always"
+        android:id="@+id/action_my_wallet"
+        android:icon="@drawable/tab_wallet"
+        android:title="@string/title_my_wallet"
         />
 </menu>

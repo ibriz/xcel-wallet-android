@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.wallet.xcel.trustapp.R;
@@ -17,6 +18,7 @@ public class TokenHolder extends BinderViewHolder<Token> implements View.OnClick
 
     private final TextView symbol;
     private final TextView balance;
+    private final ImageView logo;
 
     private Token token;
     private OnTokenClickListener onTokenClickListener;
@@ -24,6 +26,7 @@ public class TokenHolder extends BinderViewHolder<Token> implements View.OnClick
     public TokenHolder(int resId, ViewGroup parent) {
         super(resId, parent);
 
+        logo = findViewById(R.id.logo);
         symbol = findViewById(R.id.symbol);
         balance = findViewById(R.id.balance);
         itemView.setOnClickListener(this);
@@ -38,6 +41,14 @@ public class TokenHolder extends BinderViewHolder<Token> implements View.OnClick
         }
         try {
             symbol.setText(token.tokenInfo.symbol);
+
+            if(token.tokenInfo.symbol.equals(getString(R.string.xcelSymbol))){
+                logo.setImageResource(R.drawable.xcel);
+            }else if(token.tokenInfo.symbol.equals(getString(R.string.bitSymbol))){
+                logo.setImageResource(R.drawable.btc);
+            }else if(token.tokenInfo.symbol.equals(getString(R.string.ethSymbol))){
+                logo.setImageResource(R.drawable.eth);
+            }
 
             BigDecimal decimalDivisor = new BigDecimal(Math.pow(10, token.tokenInfo.decimals));
             BigDecimal ethBalance = token.tokenInfo.decimals > 0

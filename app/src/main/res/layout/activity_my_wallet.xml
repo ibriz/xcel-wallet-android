@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include layout="@layout/layout_app_bar"
+        android:id="@+id/barLayout"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/barLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/xcelBalance"
+                android:text="185.453"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/xcel"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/conversion"
+                android:text="= 3,504.23"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/dollar"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:tint="@color/colorAccent"
+                    app:srcCompat="@drawable/send"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Send"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:tint="@color/colorAccent"
+                    app:srcCompat="@drawable/receive"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Receive"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableRight="@drawable/buy"
+            android:background="@drawable/rounded_corner"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Buy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableRight="@drawable/sell"
+            android:background="@drawable/rounded_corner"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Sell"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="40dp"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:drawableTint="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:tint="@color/colorAccent"
+            app:srcCompat="@drawable/xcel"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:drawableTint="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="="
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textAlignment="center"
+            android:drawableTint="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="39.343"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:tint="@color/colorAccent"
+            app:srcCompat="@drawable/dollar"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_marginLeft="60dp"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:drawableTint="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:tint="@color/colorAccent"
+            app:srcCompat="@drawable/dollar"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:drawableTint="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="="
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textAlignment="center"
+            android:drawableTint="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:text="1.343"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:tint="@color/colorAccent"
+            app:srcCompat="@drawable/xcel"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/usdBalance"
+                android:text="7,456.453"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/dollar"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:drawableTint="@color/colorPrimary"
+                android:drawableRight="@drawable/deposit"
+                android:background="@drawable/rounded_corner"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Deposit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:drawableTint="@color/colorPrimary"
+                android:drawableRight="@drawable/withdraw"
+                android:background="@drawable/rounded_corner"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Withdraw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.wallet.xcel.trustapp.widget.SystemView
+        android:id="@+id/system_view"
+        android:background="@color/white"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone"
+        />
+</RelativeLayout>

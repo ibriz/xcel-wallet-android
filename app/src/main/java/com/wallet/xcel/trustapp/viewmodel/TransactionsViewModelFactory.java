@@ -12,6 +12,7 @@ import com.wallet.xcel.trustapp.router.ExternalBrowserRouter;
 import com.wallet.xcel.trustapp.router.ManageWalletsRouter;
 import com.wallet.xcel.trustapp.router.MyAddressRouter;
 import com.wallet.xcel.trustapp.router.MyTokensRouter;
+import com.wallet.xcel.trustapp.router.MyWalletRouter;
 import com.wallet.xcel.trustapp.router.SendRouter;
 import com.wallet.xcel.trustapp.router.SettingsRouter;
 import com.wallet.xcel.trustapp.router.TransactionDetailRouter;
@@ -27,6 +28,7 @@ public class TransactionsViewModelFactory implements ViewModelProvider.Factory {
     private final SendRouter sendRouter;
     private final TransactionDetailRouter transactionDetailRouter;
     private final MyAddressRouter myAddressRouter;
+    private final MyWalletRouter myWalletRouter;
     private final MyTokensRouter myTokensRouter;
     private final ExternalBrowserRouter externalBrowserRouter;
 
@@ -40,6 +42,7 @@ public class TransactionsViewModelFactory implements ViewModelProvider.Factory {
             SendRouter sendRouter,
             TransactionDetailRouter transactionDetailRouter,
             MyAddressRouter myAddressRouter,
+            MyWalletRouter myWalletRouter,
             MyTokensRouter myTokensRouter,
             ExternalBrowserRouter externalBrowserRouter) {
         this.findDefaultNetworkInteract = findDefaultNetworkInteract;
@@ -51,6 +54,7 @@ public class TransactionsViewModelFactory implements ViewModelProvider.Factory {
         this.sendRouter = sendRouter;
         this.transactionDetailRouter = transactionDetailRouter;
         this.myAddressRouter = myAddressRouter;
+        this.myWalletRouter = myWalletRouter;
         this.myTokensRouter = myTokensRouter;
         this.externalBrowserRouter = externalBrowserRouter;
     }
@@ -68,6 +72,7 @@ public class TransactionsViewModelFactory implements ViewModelProvider.Factory {
                 sendRouter,
                 transactionDetailRouter,
                 myAddressRouter,
+                myWalletRouter,
                 myTokensRouter,
                 externalBrowserRouter);
     }

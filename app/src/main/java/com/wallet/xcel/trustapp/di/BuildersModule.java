@@ -5,6 +5,7 @@ import com.wallet.xcel.trustapp.ui.ConfirmationActivity;
 import com.wallet.xcel.trustapp.ui.GasSettingsActivity;
 import com.wallet.xcel.trustapp.ui.ImportWalletActivity;
 import com.wallet.xcel.trustapp.ui.MyAddressActivity;
+import com.wallet.xcel.trustapp.ui.MyWalletActivity;
 import com.wallet.xcel.trustapp.ui.SendActivity;
 import com.wallet.xcel.trustapp.ui.SettingsActivity;
 import com.wallet.xcel.trustapp.ui.SplashActivity;
@@ -53,7 +54,7 @@ public abstract class BuildersModule {
 	abstract MyAddressActivity bindMyAddressModule();
 
 	@ActivityScope
-    @ContributesAndroidInjector(modules = TokensModule.class)
+    @ContributesAndroidInjector(modules = {TokensModule.class, AddTokenModule.class})
 	abstract TokensActivity bindTokensModule();
 
 	@ActivityScope

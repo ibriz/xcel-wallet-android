@@ -153,6 +153,10 @@ public class TransactionsActivity extends BaseNavigationActivity implements View
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.action_transactions: {
+                //STAY HERE
+                return true;
+            }
             case R.id.action_my_address: {
                 viewModel.showMyAddress(this);
                 return true;
@@ -163,6 +167,10 @@ public class TransactionsActivity extends BaseNavigationActivity implements View
             }
             case R.id.action_send: {
                 viewModel.showSend(this);
+                return true;
+            }
+            case R.id.action_my_wallet: {
+                viewModel.showMyWallet(this);
                 return true;
             }
         }

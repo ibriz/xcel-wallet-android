@@ -11,6 +11,7 @@ import com.wallet.xcel.trustapp.router.ExternalBrowserRouter;
 import com.wallet.xcel.trustapp.router.ManageWalletsRouter;
 import com.wallet.xcel.trustapp.router.MyAddressRouter;
 import com.wallet.xcel.trustapp.router.MyTokensRouter;
+import com.wallet.xcel.trustapp.router.MyWalletRouter;
 import com.wallet.xcel.trustapp.router.SendRouter;
 import com.wallet.xcel.trustapp.router.SettingsRouter;
 import com.wallet.xcel.trustapp.router.TransactionDetailRouter;
@@ -32,6 +33,7 @@ class TransactionsModule {
             SendRouter sendRouter,
             TransactionDetailRouter transactionDetailRouter,
             MyAddressRouter myAddressRouter,
+            MyWalletRouter myWalletRouter,
             MyTokensRouter myTokensRouter,
             ExternalBrowserRouter externalBrowserRouter) {
         return new TransactionsViewModelFactory(
@@ -44,6 +46,7 @@ class TransactionsModule {
                 sendRouter,
                 transactionDetailRouter,
                 myAddressRouter,
+                myWalletRouter,
                 myTokensRouter,
                 externalBrowserRouter);
     }
@@ -91,6 +94,11 @@ class TransactionsModule {
     @Provides
     MyAddressRouter provideMyAddressRouter() {
         return new MyAddressRouter();
+    }
+
+    @Provides
+    MyWalletRouter provideMyWalletRouter() {
+        return new MyWalletRouter();
     }
 
     @Provides
